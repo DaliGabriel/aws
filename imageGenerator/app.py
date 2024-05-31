@@ -71,7 +71,7 @@ def lambda_handler(event, context):
     if generate_image:
         current_time=datetime.now().strftime('%H%M%S')
         s3_key=f"images_generated/{current_time}.jpg"
-        s3_bucket='testbucketdali'
+        s3_bucket='bucketName'
         
         save_image_to_s3(s3_key,s3_bucket,generate_image)
         
